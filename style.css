@@ -1,5 +1,8 @@
 :root {
+    --logo-text: #fffafa;
+    --logo-banner: #696969; 
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
@@ -19,9 +22,17 @@ body {
     position: absolute;
     top: 0.5rem;
     left: 40%;
-    color: #fffafa;
+    color: var(--logo-text);
     font-size: 0.7rem;
     font-weight: 700;
+}
+
+#logo-banner {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    background-color: var(--logo-banner);
+    opacity: 0.5;
 }
 
 #content {
