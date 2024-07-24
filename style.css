@@ -7,7 +7,8 @@
 }
 
 :root {
-    --logo-text: #fffafa; 
+    --logo-text: #fffafa;
+    --logo-banner-text-size: 72px; 
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -37,14 +38,17 @@ body {
     position: absolute;
     top: 40%;
     width: 100%;
-    background-color: rgba(105, 105, 105, 0.5);
+    background-color: rgba(105, 105, 105, 0.6);
+}
+
+#logo-banner > svg {
+    height: calc(var(--logo-banner-text-size) + 40px);
 }
 
 #logo-banner > span {
     font-family: 'cyberpunkregular', sans-serif;
-    font-size: 60px;
+    font-size: var(--logo-banner-text-size);
     color: var(--logo-text);
-    opacity: 1;
 }
 
 #content {
