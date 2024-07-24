@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'cyberpunkregular';
+    src: url('./fonts/cyberpunk-webfont.woff2') format('woff2'),
+         url('./fonts/cyberpunk-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --logo-text: #fffafa;
     --logo-banner: #696969; 
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 body {
@@ -33,6 +40,12 @@ body {
     width: 100%;
     background-color: var(--logo-banner);
     opacity: 0.5;
+}
+
+#logo-banner > span {
+    font-family: 'cyberpunkregular', sans-serif;
+    font-size: 60px;
+    color: var(--logo-text);
 }
 
 #content {
