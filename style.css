@@ -22,9 +22,8 @@ body {
     position: relative;
     background-image: url(./images/ConquestOfMan.jpg);
     background-position: -45px -35px;
-    max-width: 605px;
-    min-width: 360px;
-    flex-grow: 1;
+    max-width: 560px;
+    flex: 1 0 360px;
 }
 
 #splash-image > .image-credit {
@@ -65,4 +64,9 @@ body {
 
 #content {
     flex-grow: 2;
+}
+
+#content > h2 {
+    margin-left: 5rem;
+    width: 72ch;
 }
