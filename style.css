@@ -9,9 +9,19 @@ body {
 }
 
 #splash-image {
+    position: relative;
     background-image: url(./images/ConquestOfMan.jpg);
     max-width: 605px;
     flex-grow: 1;
+}
+
+#splash-image > .image-credit {
+    position: absolute;
+    top: 0.5rem;
+    left: 40%;
+    color: #fffafa;
+    font-size: 0.7rem;
+    font-weight: 700;
 }
 
 #content {
