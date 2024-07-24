@@ -21,34 +21,46 @@ body {
 #splash-image {
     position: relative;
     background-image: url(./images/ConquestOfMan.jpg);
+    background-position: -45px -35px;
     max-width: 605px;
+    min-width: 360px;
     flex-grow: 1;
 }
 
 #splash-image > .image-credit {
     position: absolute;
-    top: 0.5rem;
-    left: 40%;
+    bottom: 0.5rem;
+    left: 1rem;
     color: var(--logo-text);
+    background-color: rgba(70, 70, 70, 0.4);
+    border-radius: 3px;
     font-size: 0.7rem;
     font-weight: 700;
 }
 
 #logo-banner {
     position: absolute;
-    top: 40%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+    top: 36%;
     width: 100%;
-    background-color: rgba(105, 105, 105, 0.6);
+    background-color: rgba(105, 105, 105, 0.7);
 }
 
 #logo-banner > svg {
-    height: calc(var(--logo-banner-text-size) + 40px);
+    height: calc(var(--logo-banner-text-size) + 60px);
 }
 
 #logo-banner > span {
     font-family: 'cyberpunkregular', sans-serif;
     font-size: var(--logo-banner-text-size);
     color: var(--logo-text);
+    letter-spacing: -15px;
+    padding-bottom: 15px;
 }
 
 #content {
