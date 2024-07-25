@@ -13,6 +13,7 @@
     --form-background-color: #f5f5f5;
     --form-shadow-color: #bdbdbd;
     --button-color: #26465d;
+    --border-color-default: #cacaca;
     --logo-banner-text-size: 72px;
     --content-left-margin: 7rem;
     --form-item-width: 30ch;
@@ -101,6 +102,13 @@ fieldset {
 .form-item>label {
     font-size: 0.9rem;
     letter-spacing: 0.15rem;
+}
+
+.form-item>input {
+    padding: 0.5rem 1ch;
+    background-color: var(--form-background-color);
+    border: 1px solid var(--border-color-default);
+    border-radius: 0.25rem;
 }
 
 span.error-message {
