@@ -14,6 +14,7 @@
     --form-shadow-color: #bdbdbd;
     --button-color: #26465d;
     --border-color-default: #cacaca;
+    --border-color-focus: #94c7dc;
     --logo-banner-text-size: 72px;
     --content-left-margin: 7rem;
     --form-item-width: 30ch;
@@ -105,10 +106,20 @@ fieldset {
 }
 
 .form-item>input {
+    outline: none;
     padding: 0.5rem 1ch;
     background-color: var(--form-background-color);
     border: 1px solid var(--border-color-default);
     border-radius: 0.25rem;
+}
+
+.form-item>input:invalid {
+    border: 1px solid var(--error-text-color);
+}
+
+.form-item>input:focus {
+    border: 1px solid var(--border-color-focus);
+    filter: drop-shadow(3px 3px 3px var(--form-shadow-color));
 }
 
 span.error-message {
