@@ -17,7 +17,7 @@
     --border-color-focus: #94c7dc;
     --logo-banner-text-size: 72px;
     --content-left-margin: 7rem;
-    --form-item-width: 30ch;
+    --form-item-width: 40ch;
     --form-column-gap: 5rem;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -111,6 +111,7 @@ fieldset {
     background-color: var(--form-background-color);
     border: 1px solid var(--border-color-default);
     border-radius: 0.25rem;
+    font-size: 1.1rem;
 }
 
 .form-item>input:invalid {
@@ -123,6 +124,7 @@ fieldset {
 }
 
 span.error-message {
+    margin-top: 0.1rem;
     color: var(--error-text-color);
     font-size: 0.75rem;
     height: 0.75rem;
