@@ -1,4 +1,5 @@
 const names = document.querySelectorAll("input[type='text']");
+const email = document.getElementById("email")
 
 for (const name of names) {
     name.addEventListener("input", () => {
@@ -10,3 +11,23 @@ for (const name of names) {
         }
     });
 }
+
+// Only displays an error once the user switches focus to avoid frustrating them 
+// while they type
+email.addEventListener("focusout", () => {
+    const errorMessage = document.querySelector(`#${email.id} + span.error-message`);
+    if (email.validity.valid) {
+        errorMessage.textContent = "";
+    } else if (email.validity.patternMismatch) {
+        errorMessage.textContent = "Invalid email address";
+    }
+});
+
+// Clears the invalid email message when the user empties the field or enters a
+// valid email
+email.addEventListener("input", () => {
+    const errorMessage = document.querySelector(`#${email.id} + span.error-message`);
+    if (email.validity.valid || !email.value) {
+        errorMessage.textContent = "";
+    }
+});
