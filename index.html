@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./validate.js" defer></script>
     <title>Sign up</title>
 </head>
 <body>
@@ -31,17 +32,19 @@
         <h2>
             This is a dummy form, please <em>don't</em> use real personal information here!
         </h2>
-        <form>
+        <form novalidate>
             <h2>Sign up here</h2>
             <fieldset>
                 <div class="form-item">
                     <label for="firstName">FIRST NAME</label>
-                    <input type="text" id="firstName" name="user_first_name">
+                    <input type="text" id="firstName" name="user_first_name" maxlength="32"
+                    pattern="^[a-zA-Z\\-\\'\\`\\ ]*$">
                     <span class="error-message"></span>
                 </div>
                 <div class="form-item">
                     <label for="lastName">LAST NAME</label>
-                    <input type="text" id="lastName" name="user_last_name">
+                    <input type="text" id="lastName" name="user_last_name" maxlength="32"
+                    pattern="^[a-zA-Z\\-\\'\\`\\ ]*$">
                     <span class="error-message"></span>
                 </div>
                 <div class="form-item">
