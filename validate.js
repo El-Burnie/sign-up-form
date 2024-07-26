@@ -1,6 +1,7 @@
 const names = document.querySelectorAll("input[type='text']");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
+const pwd = document.getElementById("pwd");
 
 for (const name of names) {
     name.addEventListener("input", () => {
@@ -39,3 +40,12 @@ phone.addEventListener("input", () => {
         errorMessage.textContent = "Invalid phone number";
     }
 });
+
+pwd.addEventListener("input", () => {
+    const errorMessage = document.querySelector(`#${pwd.id} + span.error-message`);
+    if (pwd.validity.valid || !pwd.value) {
+        errorMessage.textContent = "";
+    } else if (pwd.validity.tooShort) {
+        errorMessage.textContent = "Password must be at least 6 characters long";
+    }
+})
