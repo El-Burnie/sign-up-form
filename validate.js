@@ -1,5 +1,6 @@
 const names = document.querySelectorAll("input[type='text']");
-const email = document.getElementById("email")
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
 
 for (const name of names) {
     name.addEventListener("input", () => {
@@ -16,9 +17,7 @@ for (const name of names) {
 // while they type
 email.addEventListener("focusout", () => {
     const errorMessage = document.querySelector(`#${email.id} + span.error-message`);
-    if (email.validity.valid) {
-        errorMessage.textContent = "";
-    } else if (email.validity.patternMismatch) {
+    if (email.validity.patternMismatch) {
         errorMessage.textContent = "Invalid email address";
     }
 });
@@ -29,5 +28,14 @@ email.addEventListener("input", () => {
     const errorMessage = document.querySelector(`#${email.id} + span.error-message`);
     if (email.validity.valid || !email.value) {
         errorMessage.textContent = "";
+    }
+});
+
+phone.addEventListener("input", () => {
+    const errorMessage = document.querySelector(`#${phone.id} + span.error-message`);
+    if (phone.validity.valid) {
+        errorMessage.textContent = "";
+    } else if (phone.validity.patternMismatch) {
+        errorMessage.textContent = "Invalid phone number";
     }
 });
