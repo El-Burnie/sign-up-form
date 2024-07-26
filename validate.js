@@ -2,6 +2,7 @@ const names = document.querySelectorAll("input[type='text']");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const pwd = document.getElementById("pwd");
+const pwdConfirm = document.getElementById("pwdConfirm");
 
 for (const name of names) {
     name.addEventListener("input", () => {
@@ -48,4 +49,16 @@ pwd.addEventListener("input", () => {
     } else if (pwd.validity.tooShort) {
         errorMessage.textContent = "Password must be at least 6 characters long";
     }
-})
+});
+
+// Checks to make sure the password fields match and makes the field invalid if they are not 
+pwdConfirm.addEventListener("input", () => {
+    const errorMessage = document.querySelector(`#${pwdConfirm.id} + span.error-message`);
+    if (pwd.value == pwdConfirm.value || !pwdConfirm.value) {
+        pwdConfirm.setCustomValidity("");
+        errorMessage.textContent = "";
+    } else {
+        pwdConfirm.setCustomValidity("Passwords do not match");
+        errorMessage.textContent = "Passwords do not match";
+    }
+});
